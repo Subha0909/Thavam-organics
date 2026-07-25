@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>எள் எண்ணெய் – தவம் ஆர்கானிக்ஸ்</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .navbar-brand span {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .navbar {
+      background-color: #1d3d1a !important;
+      padding: 15px 0;
+      transition: padding 0.3s ease;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar-brand img {
+      height: 55px;
+      width: auto;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 18px;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #d4c29c !important;
+    }
+    .product-banner {
+      background: url("assets/banner-coconut.jpg") center 65%/cover no-repeat;
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      font-size: 36px;
+      font-weight: 600;
+    }
+    /* BREADCRUMB */
+    .page-breadcrumb {
+      margin-top: 12px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .page-breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+    .page-breadcrumb a:hover { opacity: 1; text-decoration: underline; }
+    .page-breadcrumb .current { color: #d4c21f; opacity: 1; }
+
+    .product-detail-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .product-detail-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      background: linear-gradient(rgba(20,38,16,0.55), rgba(20,38,16,0.65)), url("assets/banner-home.jpg") center/cover no-repeat;
+      color: white;
+      padding: 40px 0;
+    }
+    footer h4 { margin-bottom: 15px; color: #d4c29c; }
+    footer p, footer li { margin: 5px 0; }
+    footer .footer-list li { list-style: none; }
+    footer a { color: #ffffff; text-decoration: none; }
+    footer a:hover { color: white; }
+  
+    /* SCROLL REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1.active { transition-delay: 0.12s; }
+    .reveal-delay-2.active { transition-delay: 0.24s; }
+    .reveal-delay-3.active { transition-delay: 0.36s; }
+    .reveal-delay-4.active { transition-delay: 0.48s; }
+
+  
+    /* TOP INFO BAR */
+    .top-bar {
+      background: #0a2606;
+      color: #e0d500;
+      font-size: 13px;
+      padding: 6px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  
+    /* FOOTER SOCIAL ICONS */
+    .footer-social-icons {
+      display: flex;
+      gap: 26px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .footer-social-icons { justify-content: flex-start; }
+    }
+    .footer-social-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .footer-social-icons a.fs-whatsapp { background: #25D366; }
+    .footer-social-icons a.fs-email { background: #2c73c2; }
+    .footer-social-icons a:hover { transform: translateY(-3px); filter: brightness(1.1); color: #fff; }
+
+  </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+    <span><a href="product-sesame-oil.html" style="color:#e0d500;text-decoration:none;opacity:0.8;">English</a> | <a href="product-sesame-oil-ta.html" style="color:#e0d500;text-decoration:none;font-weight:600;">தமிழ்</a></span>
+    <span>எங்களை அழையுங்கள்: +91 77082 57454</span>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index-ta.html">
+        <img src="assets/1.jfif" alt="Thavam Organics">
+        <div class="ms-2" style="line-height:1;">
+          <span style="font-size:24px; font-weight:600; color:white;">THAVAM</span><br>
+          <span style="font-size:14px; letter-spacing:3px; color:#d4c21f;">ORGANICS</span>
+        </div>
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index-ta.html">முகப்பு</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-ta.html">எங்களைப் பற்றி</a></li>
+          <li class="nav-item"><a class="nav-link active" href="coconut-products-ta.html">தேங்காய் பொருட்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact-ta.html">தொடர்பு</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="product-banner">
+    எள் எண்ணெய்
+    <div class="page-breadcrumb">
+      <a href="index-ta.html">முகப்பு</a> &nbsp;/&nbsp; <a href="coconut-products-ta.html">தேங்காய் பொருட்கள்</a>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <a href="coconut-products-ta.html" class="btn btn-outline-secondary btn-sm mb-4">&larr; தேங்காய் பொருட்களுக்குத் திரும்பு</a>
+
+    <div class="product-detail-card reveal">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <img src="assets/new-sesameoil.jpg" alt="Sesame Oil">
+        </div>
+        <div class="col-md-7">
+          <h2>எள் எண்ணெய்</h2>
+          <p class="mt-3">சமையல், ஆரோக்கியம் மற்றும் பாரம்பரிய பயன்பாட்டிற்கான குளிர் அழுத்தப்பட்ட எள் எண்ணெய்.</p>
+          <ul>
+            <li><strong>நிறம்:</strong> பழுப்பு</li>
+            <li><strong>வகை:</strong> பாரம்பரிய முறை</li>
+            <li><strong>பயன்பாடுகள்:</strong> சமையல், மசாஜ்</li>
+          </ul>
+          <h4 class="mt-4">எள் எண்ணெய் பற்றி</h4>
+    <p>எள் எண்ணெய் (நல்லெண்ணெய்) மிகவும் பழமையான உண்ணக்கூடிய எண்ணெய்களில் ஒன்று, இது பாரம்பரியமாக மரச்சக்கு முறையில் எள் விதைகளிலிருந்து எடுக்கப்படுகிறது. இதற்கு தனித்துவமான கொட்டை சுவை உண்டு மற்றும் ஆக்ஸிஜனேற்றிகள், ஆரோக்கியமான கொழுப்புகள் மற்றும் தாமிரம் மற்றும் கால்சியம் போன்ற அத்தியாவசிய தாதுக்கள் நிறைந்துள்ளது. தென்னிந்திய சமையல் மற்றும் ஆயுர்வேத உடல் மசாஜில் பரவலாக பயன்படுத்தப்படுகிறது.</p>
+          <a href="https://wa.me/917708257454?text=Hi%2C%20I%27m%20interested%20in%20Sesame%20Oil" target="_blank" class="btn btn-success mt-2">வாட்ஸ்அப்பில் விசாரி</a>
+          <a href="mailto:subha.fullstack@gmail.com?subject=Enquiry about Sesame Oil" class="btn btn-outline-dark mt-2">மின்னஞ்சலில் விசாரி</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row text-center text-md-start align-items-start">
+        <div class="col-md-4 mb-4">
+          <h4>எங்களைப் பற்றி</h4>
+          <p>தவம் ஆர்கானிக்ஸ் பட்டுக்கோட்டையை சேர்ந்த ஒரு பண்ணை, இயற்கையாக வளர்க்கப்பட்ட தேங்காய் மற்றும் பண்ணை பொருட்களை வேதிப்பொருள் இல்லாமல் உற்பத்தி செய்து, எங்கள் வயல்களில் இருந்து நேரடியாக உங்கள் வீட்டிற்கு கொண்டு வருகிறோம்.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4>தேங்காய் பொருட்கள்</h4>
+          <ul class="list-unstyled footer-list">
+            <li><a href="product-coconut-ta.html">தேங்காய்</a></li>
+            <li><a href="product-groundnut-oil-ta.html">கடலை எண்ணெய்</a></li>
+            <li><a href="product-coconut-oil-ta.html">தேங்காய் எண்ணெய்</a></li>
+            <li><a href="product-coconut-shell-ta.html">தேங்காய் ஓடு</a></li>
+            <li><a href="product-sesame-oil-ta.html">எள் எண்ணெய்</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4>தொடர்பு</h4>
+          <p>பட்டுக்கோட்டை, தமிழ்நாடு, இந்தியா</p>
+          <p>மின்னஞ்சல்: subha.fullstack@gmail.com</p>
+          <p>தொலைபேசி: +91 77082 57454</p>
+          <div class="footer-social-icons">
+            <a href="https://wa.me/917708257454?text=Hi%2C%20I%20have%20an%20enquiry%20about%20your%20products" target="_blank" title="WhatsApp" class="fs-whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2 22l5.36-1.41a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.55-3.7 8.25-8.25 8.25a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.18.83.85-3.1-.2-.32a8.18 8.18 0 0 1-1.26-4.35c0-4.55 3.7-8.25 8.29-8.25Zm-4.55 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.52c.12.16 1.7 2.72 4.24 3.7 2.1.82 2.53.66 2.98.62.46-.04 1.48-.6 1.68-1.19.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.56.12-.16.24-.64.81-.79.98-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.46-.01Z"/>
+              </svg>
+            </a>
+            <a href="mailto:subha.fullstack@gmail.com?subject=Enquiry" title="Email" class="fs-email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.47a1 1 0 0 0 1 0L19.8 6H4.2Zm15.8 1.4-7.1 5.32a2.5 2.5 0 0 1-2.4 0L4.5 7.4V18h15.5V7.4Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3 small">© 2025 தவம் ஆர்கானிக்ஸ் — அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var revealEls = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("active"); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  });
+</script>
+
+</body>
+</html>
