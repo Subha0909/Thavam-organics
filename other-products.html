@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edible Coconut Oil – Thavam Organics</title>
+  <title>Other Products – Thavam Organics</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,6 +19,7 @@
     }
 
 
+    /* HEADER BAR */
     .navbar {
       background-color: #1d3d1a !important;
       padding: 15px 0;
@@ -27,30 +28,35 @@
       top: 0;
       z-index: 999;
     }
+    /* NAVBAR LOGO */
     .navbar-brand img {
       height: 55px;
       width: auto;
     }
+
     .navbar-nav .nav-link {
       color: #fff !important;
       font-weight: 500;
       font-size: 16px;
       padding: 8px 18px;
     }
+
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
       color: #d4c29c !important;
     }
+
+    /* PAGE BANNER */
     .product-banner {
       background: url("assets/banner-coconut.jpg") center 65%/cover no-repeat;
-      height: 260px;
+      height: 320px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #ffffff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-      font-size: 36px;
+      font-size: 40px;
       font-weight: 600;
     }
     /* BREADCRUMB */
@@ -67,28 +73,62 @@
     .page-breadcrumb a:hover { opacity: 1; text-decoration: underline; }
     .page-breadcrumb .current { color: #d4c21f; opacity: 1; }
 
-    .product-detail-card {
+
+    /* PRODUCT BLOCK */
+    .product-card {
       background: #fff;
-      padding: 30px;
+      padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
-    .product-detail-card img {
+
+    .product-card img {
       width: 100%;
-      height: 320px;
+      height: 260px;
       object-fit: cover;
       border-radius: 10px;
     }
+
+    .product-card h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .product-card ul {
+      padding-left: 18px;
+    }
+
+    /* FOOTER */
     footer {
       background: linear-gradient(rgba(20,38,16,0.55), rgba(20,38,16,0.65)), url("assets/banner-home.jpg") center/cover no-repeat;
       color: white;
       padding: 40px 0;
     }
-    footer h4 { margin-bottom: 15px; color: #d4c29c; }
-    footer p, footer li { margin: 5px 0; }
-    footer .footer-list li { list-style: none; }
-    footer a { color: #ffffff; text-decoration: none; }
-    footer a:hover { color: white; }
+
+    footer h4 {
+      margin-bottom: 15px;
+      color: #d4c29c;
+    }
+
+    footer p,
+    footer li {
+      margin: 5px 0;
+    }
+
+    footer .footer-list li {
+      list-style: none;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
   
     /* SCROLL REVEAL ANIMATION */
     .reveal {
@@ -267,6 +307,7 @@
 
 <body>
 
+  <!-- HEADER (Same as About Page) -->
     <div class="top-bar">
     <span id="google_translate_element"></span>
     <span>Call us: +91 77082 57454</span>
@@ -275,26 +316,30 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/1.jfif" alt="Thavam Organics">
-        <div class="ms-2" style="line-height:1;">
-          <span style="font-size:24px; font-weight:600; color:white;">THAVAM</span><br>
-          <span style="font-size:14px; letter-spacing:3px; color:#d4c21f;">ORGANICS</span>
-        </div>
-      </a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <img src="assets/1.jfif" alt="Thavam Organics">
+      <div class="ms-2" style="line-height:1;">
+        <span style="font-size:24px; font-weight:600; color:white;">THAVAM</span><br>
+        <span style="font-size:14px; letter-spacing:3px; color:#d4c21f;">ORGANICS</span>
+      </div>
+    </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="coconut-products.html">Coconut Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="other-products.html">Other Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="coconut-products.html">Coconut Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="other-products.html">Other Products</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- PAGE BANNER -->
   <!-- HERO CAROUSEL BANNER -->
 <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -437,42 +482,46 @@
   </button>
 </div>
 
+  <!-- PRODUCT LIST -->
   <section class="container my-5">
-    <a href="coconut-products.html" class="btn btn-outline-secondary btn-sm mb-4">&larr; Back to Coconut Products</a>
+    <div class="text-end mb-3">
+      <a href="assets/Thavam-Organics-Brochure.pdf" download class="btn btn-outline-success btn-sm">⬇ Download Brochure</a>
+    </div>
+    <div class="row g-4">
 
-    <div class="product-detail-card reveal">
-      <div class="row align-items-center">
-        <div class="col-md-5">
-          <img src="assets/new-coconutoil.jpg" alt="Edible Coconut Oil">
-        </div>
-        <div class="col-md-7">
-          <h2>Edible Coconut Oil</h2>
-          <p class="mt-3">High-quality copra-based oil available in Chekku and Expeller pressed types.</p>
-          <ul>
-            <li><strong>Extracted From:</strong> Premium Copra</li>
-            <li><strong>Types:</strong> Chekku Pressed, Expeller Pressed</li>
-            <li><strong>Uses:</strong> Cooking, Soap, Cosmetics</li>
-          </ul>
-          <h4 class="mt-4">About Edible Coconut Oil</h4>
-    <p>Edible coconut oil is extracted from fresh, high-quality copra and is widely used across
-    India for cooking, hair care and skin care. It contains medium-chain fatty acids (MCTs) that are
-    easily digested and provide quick energy. Virgin and Chekku (cold-pressed) variants retain the
-    natural aroma and nutrients of coconut, while expeller-pressed oil is preferred for
-    large-scale commercial cooking and soap-making industries.</p>
-          <a href="https://wa.me/917708257454?text=Hi%2C%20I%27m%20interested%20in%20Edible%20Coconut%20Oil" target="_blank" class="btn btn-success mt-2">Enquire on WhatsApp</a>
-          <a href="mailto:subha.fullstack@gmail.com?subject=Enquiry about Edible Coconut Oil" class="btn btn-outline-dark mt-2">Enquire by Email</a>
+      <!-- Groundnut Oil -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="product-card h-100 d-flex flex-column">
+          <img src="assets/new-groundnutoil.jpg" alt="Groundnut Oil">
+          <h3>Groundnut Oil</h3>
+          <p>Finely extracted groundnut oil widely used in bakery and sweet industries.</p>
+          <a href="product-groundnut-oil.html" class="btn btn-warning mt-auto">Read More</a>
         </div>
       </div>
+
+      <!-- Sesame Oil -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="product-card h-100 d-flex flex-column">
+          <img src="assets/new-sesameoil.jpg" alt="Sesame Oil">
+          <h3>Sesame Oil</h3>
+          <p>Cold-pressed sesame oil for cooking, wellness and traditional use.</p>
+          <a href="product-sesame-oil.html" class="btn btn-warning mt-auto">Read More</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- FOOTER (Same as About Page) -->
   <footer>
     <div class="container">
       <div class="row text-center text-md-start align-items-start">
+
         <div class="col-md-6 col-lg-3 mb-4">
           <h4>About Us</h4>
           <p>Thavam Organics is a Pattukottai-based farm bringing you naturally grown coconut and farm products, cultivated without chemicals and delivered fresh from our fields to your home.</p>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-4">
           <h4>Coconut Products</h4>
           <ul class="list-unstyled footer-list">
@@ -493,6 +542,7 @@
             <li><a href="product-sesame-oil.html">Sesame Oil</a></li>
           </ul>
         </div>
+
         <div class="col-md-6 col-lg-3 mb-4">
           <h4>Contact</h4>
           <p>Pattukottai, Tamil Nadu, India</p>
@@ -526,10 +576,15 @@
             </a>
           </div>
         </div>
+
       </div>
-      <div class="text-center mt-3 small">© 2025 Thavam Organics — All Rights Reserved</div>
+
+      <div class="text-center mt-3 small">
+        © 2025 Thavam Organics — All Rights Reserved
+      </div>
     </div>
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -561,4 +616,5 @@
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
+
 </html>
