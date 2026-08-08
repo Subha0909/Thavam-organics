@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coconut Water – Thavam Organics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .navbar-brand span {
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .navbar {
+      background-color: #1d3d1a !important;
+      padding: 15px 0;
+      transition: padding 0.3s ease;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar-brand img {
+      height: 55px;
+      width: auto;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 18px;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #d4c29c !important;
+    }
+    .product-banner {
+      background: url("assets/banner-coconut.jpg") center 65%/cover no-repeat;
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+      font-size: 36px;
+      font-weight: 600;
+    }
+    /* BREADCRUMB */
+    .page-breadcrumb {
+      margin-top: 12px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .page-breadcrumb a {
+      color: #fff;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+    .page-breadcrumb a:hover { opacity: 1; text-decoration: underline; }
+    .page-breadcrumb .current { color: #d4c21f; opacity: 1; }
+
+    .product-detail-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .product-detail-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      background: linear-gradient(rgba(20,38,16,0.55), rgba(20,38,16,0.65)), url("assets/banner-home.jpg") center/cover no-repeat;
+      color: white;
+      padding: 40px 0;
+    }
+    footer h4 { margin-bottom: 15px; color: #d4c29c; }
+    footer p, footer li { margin: 5px 0; }
+    footer .footer-list li { list-style: none; }
+    footer a { color: #ffffff; text-decoration: none; }
+    footer a:hover { color: white; }
+  
+    /* SCROLL REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1.active { transition-delay: 0.12s; }
+    .reveal-delay-2.active { transition-delay: 0.24s; }
+    .reveal-delay-3.active { transition-delay: 0.36s; }
+    .reveal-delay-4.active { transition-delay: 0.48s; }
+
+  
+    /* TOP INFO BAR */
+    .top-bar {
+      background: #0a2606;
+      color: #e0d500;
+      font-size: 13px;
+      padding: 6px 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  
+    /* FOOTER SOCIAL ICONS */
+    .footer-social-icons {
+      display: flex;
+      gap: 26px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .footer-social-icons { justify-content: flex-start; }
+    }
+    .footer-social-icons a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .footer-social-icons a.fs-whatsapp { background: #25D366; }
+    .footer-social-icons a.fs-email { background: #2c73c2; }
+    .footer-social-icons a.fs-instagram { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .footer-social-icons a.fs-facebook { background: #1877F2; }
+    .footer-social-icons a.fs-twitter { background: #14171A; }
+    .footer-social-vertical { flex-direction: row; flex-wrap: wrap; }
+    @media (min-width: 768px) { .footer-social-vertical { align-items: flex-start; } }
+    .footer-social-icons a:hover { transform: translateY(-3px); filter: brightness(1.1); color: #fff; }
+
+  
+    /* GOOGLE TRANSLATE WIDGET */
+    #google_translate_element {
+      display: inline-block;
+    }
+    #google_translate_element .goog-te-gadget {
+      color: #e0d500 !important;
+      font-size: 13px !important;
+      font-family: inherit !important;
+    }
+    #google_translate_element .goog-te-gadget-simple {
+      background: transparent !important;
+      border: 1px solid #e0d500 !important;
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+    #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {
+      color: #e0d500 !important;
+    }
+    body { top: 0 !important; }
+    .goog-te-banner-frame { display: none !important; }
+    .goog-logo-link { display: none !important; }
+    .goog-te-gadget { font-size: 0 !important; }
+    .goog-te-gadget .goog-te-combo { font-size: 13px !important; margin: 0 !important; }
+    body { top: 0px !important; }
+        /* HERO CAROUSEL BANNER (used on all pages) */
+    .hero-carousel .carousel-item {
+      height: 480px;
+      background: url("assets/banner-home.jpg") center/cover no-repeat;
+    }
+    .hero-carousel .carousel-item .hero-slide-inner {
+      height: 100%;
+    }
+    .hero-slide-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1250px;
+      margin: 0 auto;
+      gap: 20px;
+      padding: 0 70px;
+      position: relative;
+      z-index: 3;
+    }
+    .hero-text {
+      color: #fff;
+      max-width: 600px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 4;
+    }
+    .hero-text .btn {
+      position: relative;
+      z-index: 5;
+    }
+    .hero-tagline {
+      font-family: cursive;
+      color: #e0d500;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    .hero-text h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero-text p.hero-desc {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    .hero-img-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      height: 300px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .hero-img-box img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      border: 6px solid rgba(255,255,255,0.9);
+      box-shadow: 0 0 0 3px rgba(224,213,0,0.5), 0 15px 35px rgba(0,0,0,0.55);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-carousel .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.6;
+    }
+    .hero-carousel .carousel-indicators .active {
+      opacity: 1;
+      background-color: #e0d500;
+    }
+    .hero-carousel .carousel-control-prev,
+    .hero-carousel .carousel-control-next {
+      width: 6%;
+      z-index: 2;
+    }
+    @media (max-width: 767px) {
+      .hero-slide-inner { flex-direction: column; text-align: center; padding: 20px; }
+      .hero-img-box { width: 180px; height: 180px; }
+      .hero-img-box img { width: 180px; height: 180px; }
+      .hero-carousel .carousel-item { height: 520px; }
+    }
+
+
+    
+  </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+    <span id="google_translate_element"></span>
+    <span>Call us: +91 77082 57454</span>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/1.jfif" alt="Thavam Organics">
+        <div class="ms-2" style="line-height:1;">
+          <span style="font-size:24px; font-weight:600; color:white;">THAVAM</span><br>
+          <span style="font-size:14px; letter-spacing:3px; color:#d4c21f;">ORGANICS</span>
+        </div>
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="coconut-products.html">Coconut Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="other-products.html">Other Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO CAROUSEL BANNER -->
+<div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="8"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="hero-slide-inner flex-row-reverse">
+        <div class="hero-text">
+          <p class="hero-tagline">Fresh & Export Quality</p>
+          <h1>Coconut</h1>
+          <p class="hero-desc">Fresh matured coconuts of export quality with superior freshness and taste.</p>
+          <a href="product-coconut.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-coconut-round.jpg" alt="Coconut">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner">
+        <div class="hero-text">
+          <p class="hero-tagline">Naturally Cold-Pressed</p>
+          <h1>Groundnut Oil</h1>
+          <p class="hero-desc">Finely extracted groundnut oil widely used in bakery and sweet industries.</p>
+          <a href="product-groundnut-oil.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-groundnutoil-round.jpg" alt="Groundnut Oil">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner flex-row-reverse">
+        <div class="hero-text">
+          <p class="hero-tagline">Pure &amp; Chemical-Free</p>
+          <h1>Edible Coconut Oil</h1>
+          <p class="hero-desc">High-quality copra-based oil available in Chekku and Expeller pressed types.</p>
+          <a href="product-coconut-oil.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-coconutoil-round.jpg" alt="Edible Coconut Oil">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner">
+        <div class="hero-text">
+          <p class="hero-tagline">Eco-Friendly &amp; Sustainable</p>
+          <h1>Coconut Shell</h1>
+          <p class="hero-desc">Used for charcoal, activated carbon, and various industrial applications.</p>
+          <a href="product-coconut-shell.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-coconutshell-round.jpg" alt="Coconut Shell">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner flex-row-reverse">
+        <div class="hero-text">
+          <p class="hero-tagline">Traditionally Extracted</p>
+          <h1>Sesame Oil</h1>
+          <p class="hero-desc">Cold-pressed sesame oil for cooking, wellness and traditional use.</p>
+          <a href="product-sesame-oil.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-sesameoil-round.jpg" alt="Sesame Oil">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner">
+        <div class="hero-text">
+          <p class="hero-tagline">Bakery &amp; Sweet Making</p>
+          <h1>Desiccated Coconut</h1>
+          <p class="hero-desc">Finely grated and dried coconut, widely used in bakery and confectionery.</p>
+          <a href="product-desiccated-coconut.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-desiccated-coconut-round.jpg" alt="Desiccated Coconut">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner flex-row-reverse">
+        <div class="hero-text">
+          <p class="hero-tagline">Fresh &amp; Fine</p>
+          <h1>Shredded Coconut</h1>
+          <p class="hero-desc">Freshly shredded coconut flakes, ideal for cooking and garnishing.</p>
+          <a href="product-shredded-coconut.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-shredded-coconut-round.jpg" alt="Shredded Coconut">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner">
+        <div class="hero-text">
+          <p class="hero-tagline">Bite-Sized Goodness</p>
+          <h1>Coconut Chunks</h1>
+          <p class="hero-desc">Bite-sized fresh coconut chunks, perfect for snacking and cooking.</p>
+          <a href="product-coconut-chunks.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-coconut-chunks-round.jpg" alt="Coconut Chunks">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-slide-inner flex-row-reverse">
+        <div class="hero-text">
+          <p class="hero-tagline">Naturally Refreshing</p>
+          <h1>Coconut Water</h1>
+          <p class="hero-desc">Natural, refreshing coconut water straight from tender coconuts.</p>
+          <a href="product-coconut-water.html" class="btn btn-warning">Know More</a>
+        </div>
+        <div class="hero-img-box">
+          <img src="assets/new-coconut-water-round.jpg" alt="Coconut Water">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <section class="container my-5">
+    <a href="coconut-products.html" class="btn btn-outline-secondary btn-sm mb-4">&larr; Back to Coconut Products</a>
+
+    <div class="product-detail-card reveal">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <img src="assets/new-coconut-water.jpg" alt="Coconut Water">
+        </div>
+        <div class="col-md-7">
+          <h2>Coconut Water</h2>
+          <p class="mt-3">Natural, refreshing coconut water straight from tender coconuts.</p>
+          <ul>
+            <li><strong>Color:</strong> Clear / Light</li>
+            <li><strong>Type:</strong> Natural, Unprocessed</li>
+            <li><strong>Usage:</strong> Refreshing drink, Hydration</li>
+            <li><strong>Shelf Life:</strong> Best consumed fresh</li>
+          </ul>
+          <h4 class="mt-4">About Coconut Water</h4>
+    <p>Coconut water is the naturally occurring clear liquid inside young, tender coconuts. It's a refreshing, hydrating drink packed with natural electrolytes, low in calories, and enjoyed across India as a healthy, natural beverage straight from the farm.</p>
+          <a href="https://wa.me/917708257454?text=Hi%2C%20I%27m%20interested%20in%20Coconut%20Water" target="_blank" class="btn btn-success mt-2">Enquire on WhatsApp</a>
+          <a href="mailto:subha.fullstack@gmail.com?subject=Enquiry about Coconut Water" class="btn btn-outline-dark mt-2">Enquire by Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row text-center text-md-start align-items-start">
+        <div class="col-md-6 col-lg-3 mb-4">
+          <h4>About Us</h4>
+          <p>Thavam Organics is a Pattukottai-based farm bringing you naturally grown coconut and farm products, cultivated without chemicals and delivered fresh from our fields to your home.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <h4>Coconut Products</h4>
+          <ul class="list-unstyled footer-list">
+            <li><a href="product-coconut.html">Coconut</a></li>
+            <li><a href="product-desiccated-coconut.html">Desiccated Coconut</a></li>
+            <li><a href="product-shredded-coconut.html">Shredded Coconut</a></li>
+            <li><a href="product-coconut-chunks.html">Coconut Chunks</a></li>
+            <li><a href="product-coconut-shell.html">Coconut Shell</a></li>
+            <li><a href="product-coconut-oil.html">Edible Coconut Oil</a></li>
+            <li><a href="product-coconut-water.html">Coconut Water</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <h4>Other Products</h4>
+          <ul class="list-unstyled footer-list">
+            <li><a href="product-groundnut-oil.html">Groundnut Oil</a></li>
+            <li><a href="product-sesame-oil.html">Sesame Oil</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <h4>Contact</h4>
+          <p>Pattukottai, Tamil Nadu, India</p>
+          <p>Email: subha.fullstack@gmail.com</p>
+          <p>Phone: +91 77082 57454</p>
+          <div class="footer-social-icons">
+            <a href="https://wa.me/917708257454?text=Hi%2C%20I%20have%20an%20enquiry%20about%20your%20products" target="_blank" title="WhatsApp" class="fs-whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2 22l5.36-1.41a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2Zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.55-3.7 8.25-8.25 8.25a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.18.83.85-3.1-.2-.32a8.18 8.18 0 0 1-1.26-4.35c0-4.55 3.7-8.25 8.29-8.25Zm-4.55 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.52c.12.16 1.7 2.72 4.24 3.7 2.1.82 2.53.66 2.98.62.46-.04 1.48-.6 1.68-1.19.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.46-.28-.24-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.56.12-.16.24-.64.81-.79.98-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.56-1.36-.78-1.86-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.46-.01Z"/>
+              </svg>
+            </a>
+            <a href="mailto:subha.fullstack@gmail.com?subject=Enquiry" title="Email" class="fs-email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.47a1 1 0 0 0 1 0L19.8 6H4.2Zm15.8 1.4-7.1 5.32a2.5 2.5 0 0 1-2.4 0L4.5 7.4V18h15.5V7.4Z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" title="Instagram" class="fs-instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C20.32 1.35 19.65.94 18.86.63c-.76-.3-1.64-.5-2.91-.56C14.67.01 14.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" title="Facebook" class="fs-facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter" class="fs-twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.44 4.83c-.8.36-1.66.6-2.56.71a4.48 4.48 0 0 0 1.96-2.48 8.94 8.94 0 0 1-2.83 1.08 4.47 4.47 0 0 0-7.61 4.07A12.68 12.68 0 0 1 1.64 3.16a4.47 4.47 0 0 0 1.38 5.97 4.4 4.4 0 0 1-2.02-.56v.06a4.47 4.47 0 0 0 3.58 4.38 4.5 4.5 0 0 1-2.01.08 4.47 4.47 0 0 0 4.17 3.1A8.97 8.97 0 0 1 0 19.4a12.65 12.65 0 0 0 6.84 2c8.2 0 12.7-6.79 12.7-12.68 0-.19 0-.38-.01-.57a9.06 9.06 0 0 0 2.22-2.32Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3 small">© 2025 Thavam Organics — All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var revealEls = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("active"); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  });
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
